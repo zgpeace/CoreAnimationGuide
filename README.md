@@ -1,6 +1,8 @@
 # CoreAnimationGuide
-https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/CreatingBasicAnimations/CreatingBasicAnimations.html#//apple_ref/doc/uid/TP40004514-CH3-SW1
+https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/CreatingBasicAnimations/CreatingBasicAnimations.html#//apple_ref/doc/uid/TP40004514-CH3-SW1  
 
+例子效果图：  
+![](./AnimationLayerContent.gif)  
 
 #Core Animation
 ##总结
