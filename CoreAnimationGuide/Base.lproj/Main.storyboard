@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="core-animation-hero" translatesAutoresizingMaskIntoConstraints="NO" id="QPp-aJ-vur">
-                                <rect key="frame" x="16" y="337" width="100" height="100"/>
+                                <rect key="frame" x="16" y="327" width="100" height="100"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDO-yg-lig">
-                                <rect key="frame" x="23" y="542" width="63" height="34"/>
+                                <rect key="frame" x="16" y="442" width="63" height="34"/>
                                 <color key="backgroundColor" red="0.68461340665817261" green="0.26686954498291016" blue="0.82416915893554688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Opacity"/>
                                 <userDefinedRuntimeAttributes>
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zT6-Qu-wOm">
-                                <rect key="frame" x="116" y="542" width="77" height="34"/>
+                                <rect key="frame" x="94" y="442" width="77" height="34"/>
                                 <color key="backgroundColor" red="0.68461340670000004" green="0.26686954499999999" blue="0.82416915889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Keyframe"/>
                                 <userDefinedRuntimeAttributes>
@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88U-gQ-t26">
-                                <rect key="frame" x="217" y="542" width="63" height="34"/>
+                                <rect key="frame" x="195" y="442" width="63" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.68461340670000004" green="0.26686954499999999" blue="0.82416915889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="group"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoU-88-8Dj">
-                                <rect key="frame" x="23" y="593" width="84" height="34"/>
+                                <rect key="frame" x="275" y="442" width="84" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.68461340670000004" green="0.26686954499999999" blue="0.82416915889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="ViewBlock"/>
@@ -75,21 +75,114 @@
                                     <action selector="clickViewBlock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ysS-F2-zzu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-lT-5wA">
+                                <rect key="frame" x="16" y="526" width="119" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="PushTransition"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickTransition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PAu-Sn-HKh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Uc-D2-5fy">
+                                <rect key="frame" x="94" y="20" width="100" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="1" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jmq-Co-C34">
+                                <rect key="frame" x="94" y="20" width="100" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yq-zA-suQ">
+                                <rect key="frame" x="16" y="484" width="126" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68461340670000004" green="0.26686954499999999" blue="0.82416915889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="KeyframePause"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickKeyframePause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qEV-eJ-tv6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-qH-iog">
+                                <rect key="frame" x="150" y="484" width="142" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68461340670000004" green="0.26686954499999999" blue="0.82416915889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="KeyframeResume"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickKeyframeResume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e5Q-Lr-hkW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vf-q3-4R1">
+                                <rect key="frame" x="143" y="526" width="69" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68461340670000004" green="0.26686954499999999" blue="0.82416915889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ExplicitT"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickExplicitTransaction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QJ8-Cj-zHX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ET9-VI-uMJ">
+                                <rect key="frame" x="220" y="526" width="49" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68461340670000004" green="0.26686954499999999" blue="0.82416915889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="NestT"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickNestTransaction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0GR-Qz-ewv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQm-MT-bKs">
+                                <rect key="frame" x="276" y="526" width="83" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68461340670000004" green="0.26686954499999999" blue="0.82416915889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Transform"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QPp-aJ-vur" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KTr-E9-j39"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zT6-Qu-wOm" secondAttribute="trailing" constant="20" symbolic="YES" id="MHU-Wt-9zd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zT6-Qu-wOm" secondAttribute="bottom" constant="91" id="TIu-Tq-Jgn"/>
-                            <constraint firstItem="fDO-yg-lig" firstAttribute="top" secondItem="QPp-aJ-vur" secondAttribute="bottom" constant="105" id="Wx3-wv-5nu"/>
-                            <constraint firstItem="fDO-yg-lig" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="ZRo-rN-WcR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zT6-Qu-wOm" secondAttribute="bottom" constant="191" id="TIu-Tq-Jgn"/>
+                            <constraint firstItem="fDO-yg-lig" firstAttribute="top" secondItem="QPp-aJ-vur" secondAttribute="bottom" constant="15" id="Wx3-wv-5nu"/>
+                            <constraint firstItem="fDO-yg-lig" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZRo-rN-WcR"/>
                             <constraint firstItem="fDO-yg-lig" firstAttribute="baseline" secondItem="zT6-Qu-wOm" secondAttribute="baseline" id="dTH-Sj-Yzg"/>
-                            <constraint firstItem="zT6-Qu-wOm" firstAttribute="leading" secondItem="fDO-yg-lig" secondAttribute="trailing" constant="30" id="ewG-Yp-1ng"/>
+                            <constraint firstItem="zT6-Qu-wOm" firstAttribute="leading" secondItem="fDO-yg-lig" secondAttribute="trailing" constant="15" id="ewG-Yp-1ng"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="animationImage" destination="QPp-aJ-vur" id="02F-cn-Y6J"/>
+                        <outlet property="view1" destination="Jmq-Co-C34" id="fBN-v8-dIv"/>
+                        <outlet property="view2" destination="4Uc-D2-5fy" id="9mB-lI-ugg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

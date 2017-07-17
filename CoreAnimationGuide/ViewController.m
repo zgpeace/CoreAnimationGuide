@@ -10,10 +10,17 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *animationImage;
+@property (weak, nonatomic) IBOutlet UIView *view1;
+@property (weak, nonatomic) IBOutlet UIView *view2;
 - (IBAction)clickOpacity:(id)sender;
 - (IBAction)clickBounce:(id)sender;
 - (IBAction)clickGroup:(id)sender;
 - (IBAction)clickViewBlock:(id)sender;
+- (IBAction)clickTransition:(id)sender;
+- (IBAction)clickKeyframePause:(id)sender;
+- (IBAction)clickKeyframeResume:(id)sender;
+- (IBAction)clickExplicitTransaction:(id)sender;
+- (IBAction)clickNestTransaction:(id)sender;
 
 @end
 
@@ -30,6 +37,25 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - layer Pausing and Resuming Animations
+
+- (void)pauseLayer:(CALayer *)layer
+{
+    CFTimeInterval pauseTime = [layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    layer.speed = 0.0;
+    layer.timeOffset = pauseTime;
+}
+
+- (void)resumeLayer:(CALayer *)layer
+{
+    CFTimeInterval pausedTime = [layer timeOffset];
+    layer.speed = 1.0;
+    layer.timeOffset = 0.0;
+    layer.beginTime = 0.0;
+    CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+    layer.beginTime = timeSincePause;
 }
 
 #pragma mark - button action
@@ -106,6 +132,69 @@
         [_animationImage.layer addAnimation:theAnimation forKey:@"AnimateFrame"];
     }];
 }
+
+- (IBAction)clickTransition:(id)sender {
+    
+    
+    CATransition *transition = [CATransition animation];
+    transition.startProgress = 0;
+    transition.endProgress = 1.0;
+    transition.type = kCATransitionPush;
+    transition.subtype = kCATransitionFromRight;
+    transition.duration = 1.0;
+    
+    // Add the transition animation to both layers
+    [_view1.layer addAnimation:transition forKey:@"transition"];
+    [_view2.layer addAnimation:transition forKey:@"transition"];
+    
+    // Finally, change the visibility of the layers.
+    _view1.hidden = YES;
+    _view2.hidden = NO;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        _view1.hidden = NO;
+        _view2.hidden = NO;
+    });
+}
+
+- (IBAction)clickKeyframePause:(id)sender {
+    [self pauseLayer:_animationImage.layer];
+}
+
+- (IBAction)clickKeyframeResume:(id)sender {
+    [self resumeLayer:_animationImage.layer];
+}
+
+- (IBAction)clickExplicitTransaction:(id)sender {
+    [CATransaction begin];
+    [CATransaction setValue:[NSNumber numberWithFloat:10.0f] forKey:kCATransactionAnimationDuration];
+    // Perform the animations
+    _animationImage.layer.zPosition = 200.0;
+    _animationImage.layer.opacity = _animationImage.layer.opacity == 0.0 ? 1.0 : 0.0;
+    [CATransaction commit];
+}
+
+- (IBAction)clickNestTransaction:(id)sender {
+    [CATransaction begin]; //Outer transaction
+    
+    // Change the animation duration to two seconds
+    [CATransaction setValue:[NSNumber numberWithFloat:2.0f] forKey:kCATransactionAnimationDuration];
+    // Move the layer to a new position
+    _animationImage.layer.position = CGPointMake(0.0, 0.0);
+    
+    [CATransaction begin];  // Inner transaction
+    // Change the aniamtion duration to five seconds
+    [CATransaction setValue:[NSNumber numberWithFloat:5.0f] forKey:kCATransactionAnimationDuration];
+    
+    // Change the zPosition and opacity
+    _animationImage.layer.zPosition = 200.0;
+    _animationImage.layer.opacity = 0.0;
+    
+    [CATransaction commit]; // Inner transaction
+    [CATransaction commit]; // Outer transaction
+}
+
+
 
 @end
 
